@@ -1,0 +1,34 @@
+#!/usr/bin/php
+<?php
+
+require_once __DIR__.'/../src/urlShortener.php';
+
+if (array_key_exists(1, $argv)) {
+    switch ($argv[1]) {
+        case 'short': {
+            if (!array_key_exists(2, $argv)) {
+                echo 'Url identifier expected' . PHP_EOL;
+                break;
+            }
+            echo 'Shortened url is: ' . getShortUrlById($argv[2]) . PHP_EOL;
+            break;
+        }
+        case 'id': {
+            if (!array_key_exists(2, $argv)) {
+                echo 'Url expected' . PHP_EOL;
+                break;
+            }
+            echo 'Url identifier is: ' . getUrlIdentifier($argv[2]) . PHP_EOL;
+            break;
+        }
+        default: {
+            echo "Usage: shurl <command> [<args>]" . PHP_EOL;
+        }
+    }
+} else {
+    echo "Usage: shurl <command> [<args>]
+            commands:
+                short - get short url by id
+                id - get url identifier" . PHP_EOL;
+}
+
