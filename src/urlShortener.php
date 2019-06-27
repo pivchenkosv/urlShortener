@@ -34,8 +34,6 @@ function getShortUrlById($id)
     return $shorturl;
 }
 
-;
-
 /**
  * Transforms short URL to its identifier
  *
@@ -45,6 +43,7 @@ function getShortUrlById($id)
  */
 function getUrlIdentifier($url)
 {
+    echo ord(1) . 'asdf' . ord('1');
     $id = 0; // initialize result
 
     // A simple base conversion logic
@@ -55,11 +54,9 @@ function getUrlIdentifier($url)
         if (ord('A') <= ord($url[$i]) && ord($url[$i]) <= ord('Z')) {
             $id = $id * 62 + ord($url[$i]) - ord('A') + 26;
         }
-        if ('0' <= ord($url[$i]) && ord($url[$i]) <= '9') {
+        if (ord('0') <= ord($url[$i]) && ord($url[$i]) <= ord('9')) {
             $id = $id * 62 + ord($url[$i]) - ord('0') + 52;
         }
     }
     return $id;
 }
-
-;

@@ -5,7 +5,7 @@ require_once __DIR__.'/../src/urlShortener.php';
 
 if (array_key_exists(1, $argv)) {
     switch ($argv[1]) {
-        case 'short': {
+        case 'short-url': {
             if (!array_key_exists(2, $argv)) {
                 echo 'Url identifier expected' . PHP_EOL;
                 break;
@@ -13,7 +13,7 @@ if (array_key_exists(1, $argv)) {
             echo 'Shortened url is: ' . getShortUrlById($argv[2]) . PHP_EOL;
             break;
         }
-        case 'id': {
+        case 'get-id': {
             if (!array_key_exists(2, $argv)) {
                 echo 'Url expected' . PHP_EOL;
                 break;
@@ -21,14 +21,28 @@ if (array_key_exists(1, $argv)) {
             echo 'Url identifier is: ' . getUrlIdentifier($argv[2]) . PHP_EOL;
             break;
         }
+        case '-h': {
+            echo "Usage: shurl <command> [<args>]". PHP_EOL.
+                "   commands:". PHP_EOL.
+                    "       short-url - get short url by id". PHP_EOL.
+                    "       get-id - get url identifier" . PHP_EOL;
+            break;
+        }
+        case '--help': {
+                    echo "Usage: shurl <command> [<args>]". PHP_EOL.
+                        "   commands:". PHP_EOL.
+                            "       short-url - get short url by id". PHP_EOL.
+                            "       get-id - get url identifier" . PHP_EOL;
+                    break;
+                }
         default: {
-            echo "Usage: shurl <command> [<args>]" . PHP_EOL;
+            echo "Command '$argv[1]' is not defined" . PHP_EOL;
         }
     }
 } else {
-    echo "Usage: shurl <command> [<args>]
-            commands:
-                short - get short url by id
-                id - get url identifier" . PHP_EOL;
+    echo "Usage: shurl <command> [<args>]". PHP_EOL.
+        "   commands:". PHP_EOL.
+            "       short-url - get short url by id". PHP_EOL.
+            "       get-id - get url identifier" . PHP_EOL;
 }
 

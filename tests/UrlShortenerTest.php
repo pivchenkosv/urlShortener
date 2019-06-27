@@ -1,6 +1,7 @@
 <?php
 
-require_once 'src/urlShortener.php';
+use function getUrlIdentifier;
+use function getShortUrlById;
 
 use PHPUnit\Framework\TestCase;
 
