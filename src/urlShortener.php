@@ -43,7 +43,6 @@ function getShortUrlById($id)
  */
 function getUrlIdentifier($url)
 {
-    echo ord(1) . 'asdf' . ord('1');
     $id = 0; // initialize result
 
     // A simple base conversion logic
