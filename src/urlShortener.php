@@ -21,7 +21,6 @@ function getUrlIdentifier($url)
 {
     $id = 0; // initialize result
 
-    echo ord('a');
     // A simple base conversion logic
     for ($i=0; $i < strlen($url); $i++)
     {
