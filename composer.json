@@ -16,7 +16,7 @@
         ]
     },
     "bin": [
-        "bin/shurl"
+        "bin/shourl"
     ],
     "scripts": {
         "test": "vendor/bin/phpunit tests/UrlShortenerTest",

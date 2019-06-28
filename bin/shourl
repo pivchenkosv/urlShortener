@@ -22,14 +22,14 @@ if (array_key_exists(1, $argv)) {
             break;
         }
         case '-h': {
-            echo "Usage: shurl <command> [<args>]". PHP_EOL.
+            echo "Usage: shourl <command> [<args>]". PHP_EOL.
                 "   commands:". PHP_EOL.
                     "       short-url - get short url by id". PHP_EOL.
                     "       get-id - get url identifier" . PHP_EOL;
             break;
         }
         case '--help': {
-                    echo "Usage: shurl <command> [<args>]". PHP_EOL.
+                    echo "Usage: shourl <command> [<args>]". PHP_EOL.
                         "   commands:". PHP_EOL.
                             "       short-url - get short url by id". PHP_EOL.
                             "       get-id - get url identifier" . PHP_EOL;
@@ -40,7 +40,7 @@ if (array_key_exists(1, $argv)) {
         }
     }
 } else {
-    echo "Usage: shurl <command> [<args>]". PHP_EOL.
+    echo "Usage: shourl <command> [<args>]". PHP_EOL.
         "   commands:". PHP_EOL.
             "       short-url - get short url by id". PHP_EOL.
             "       get-id - get url identifier" . PHP_EOL;
