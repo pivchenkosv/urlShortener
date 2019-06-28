@@ -1,4 +1,4 @@
 test:
 	composer run test
 codesniffer:
-	composer run codesniffer-test
+	composer run codesniffer
